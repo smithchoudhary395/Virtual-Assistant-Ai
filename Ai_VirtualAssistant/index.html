@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INS Voice - My Virtual Assistant</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="logo.jpg" alt="logo" id="logo" />
+      
+      <h1>
+        <span id="name">Voice Ai</span> – <span id="va">Virtual Assistant</span>
+      </h1>
+
+      <!-- Typing text animation -->
+      <p class="typing" id="typing-text">Hello! I'm here to help you with anything.</p>
+
+      <!-- Voice gif when active -->
+      <img src="voice.gif" alt="voice" id="voice" />
+
+      <!-- Voice button -->
+      <button id="btn">
+        <img src="mic.svg" alt="mic" />
+        <span id="content">Click here to talk to me</span>
+      </button>
+
+      <!-- Chat bubble popup (example of messages) -->
+      <div class="chat-bubble">
+        <p>Hello! How can I assist you today? 😊</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ by Sumit Choudhary</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+      // Typing Effect
+      const text = "Hello! I'm here to help you with anything.";
+      let index = 0;
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typing-text").textContent += text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 50);
+        }
+      }
+      window.onload = () => {
+        document.getElementById("typing-text").textContent = "";
+        typeEffect();
+      };
+    </script>
+  </body>
+</html>

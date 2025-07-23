@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Protest+Guerrilla&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#logo {
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+#logo:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Protest Guerrilla', cursive;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+#name {
+  color: #ff3c8d;
+}
+
+#va {
+  color: #00f6ff;
+}
+
+.typing {
+  font-size: 1.1rem;
+  color: #c2f5ff;
+  font-style: italic;
+  margin-bottom: 20px;
+  min-height: 24px;
+  animation: fadeIn 2s ease-in;
+}
+
+#voice {
+  width: 150px;
+  display: none;
+  margin: 15px auto;
+}
+
+/* Voice Button */
+#btn {
+  background: linear-gradient(to right, #15a1c8, #c92974);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 5px 20px rgba(21, 145, 207, 0.5), 0 5px 20px rgba(201, 41, 116, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+#btn img {
+  width: 22px;
+  height: 22px;
+}
+
+#btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(21, 145, 207, 0.6), 0 8px 30px rgba(201, 41, 116, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Chat bubble */
+.chat-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #ffffff20;
+  padding: 15px 20px;
+  border-radius: 15px;
+  max-width: 350px;
+  color: #fff;
+  font-size: 16px;
+  margin: 30px auto 0;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: floatUp 0.7s ease-in-out;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .chat-bubble {
+    font-size: 14px;
+    max-width: 90%;
+  }
+}
